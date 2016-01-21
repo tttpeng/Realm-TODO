@@ -86,10 +86,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="kny-zo-zTA">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="YF9-7M-SVg"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Sa-fw-UQD"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="YF9-7M-SVg">
+                            <connections>
+                                <action selector="didClickOnEditButton:" destination="CZr-u6-IZx" id="HcE-uf-lRv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0Sa-fw-UQD">
+                            <connections>
+                                <action selector="didClickAddButton:" destination="CZr-u6-IZx" id="d7g-1N-lIb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="taskListTableView" destination="ApN-cO-2YR" id="O11-0e-dhX"/>
                         <segue destination="3Hr-SS-Nxl" kind="push" id="nJ6-6P-X9w"/>
                     </connections>
                 </viewController>
